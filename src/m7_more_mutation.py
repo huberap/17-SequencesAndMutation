@@ -4,8 +4,8 @@ by changing the values of instance variables.
 
 Authors: David Mutchler, Amanda Stouder, Chandan Rupakheti, Katie Dion,
          Claude Anderson, Delvin Defoe, Curt Clifton, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and alex huber.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -157,6 +157,13 @@ def run_test_RETURN_circle():
 
 
 def RETURN_circle(circle, color):
+    newcirc = rg.Circle(circle.center,circle.radius)
+    newcirc.fill_color = color
+
+    return newcirc
+
+
+
     """
     Returns a NEW rg.Circle that is a CLONE (copy) of the given circle,
     but with its color set to the given color.
@@ -169,7 +176,7 @@ def RETURN_circle(circle, color):
     where the color is either a string that Rosegraphics understands
     or a rg.Color object.
     """
-    # TODO: 2. First, READ THE ABOVE TEST CODE.
+    # done: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
@@ -290,6 +297,9 @@ def run_test_MUTATE_circle():
 
 
 def MUTATE_circle(circle, color, n):
+    circle.fill_color = color
+    circle.center.x = circle.center.x + n
+
     """
     MUTATES the given circle, so that:
       1. its fill color becomes the given color, and
@@ -301,7 +311,7 @@ def MUTATE_circle(circle, color, n):
     Precondition: The first argument is a rg.Circle and the second
                   argument is a color appropriate for Zellegraphics.
     """
-    # TODO: 3. First, READ THE ABOVE TEST CODE.
+    # done: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
